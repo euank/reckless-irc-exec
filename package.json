@@ -1,0 +1,16 @@
+{
+  "name": "irc-exec-bot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mktemp": "~0.3.4",
+    "forever": "*",
+    "irc": "~0.3.6"
+  }
+}
