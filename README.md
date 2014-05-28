@@ -13,5 +13,6 @@ e.g., after setting up the heroku remote in this repo, you could do the followin
 ```
 git checkout -b exec
 cp config.example.js config.js; vim config.js
+git add -f config.js; git commit -a -m "Added my personal config; do not push to github"
 git push heroku exec:master
 ```
