@@ -9,3 +9,9 @@ best supported) in irc chat.
 
 Copy config.example.js to config.js, create a branch in which you add that file
 to your git, push that sucker to heroku.
+e.g., after setting up the heroku remote in this repo, you could do the following:
+```
+git checkout -b exec
+cp config.example.js config.js; vim config.js
+git push heroku exec:master
+```
