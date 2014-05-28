@@ -9,6 +9,9 @@ best supported) in irc chat.
 
 Copy config.example.js to config.js, create a branch in which you add that file
 to your git, push that sucker to heroku.
+
+Please note, your heroku app should have 1x worker dyno and 0x web dynos. For your convenience, accidentally including a web dyno will make the app crash (no garuntee on that though).
+
 e.g., after setting up the heroku remote in this repo, you could do the following:
 ```
 git checkout -b exec
