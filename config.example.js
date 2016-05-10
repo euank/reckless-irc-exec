@@ -13,5 +13,6 @@ module.exports = {
     floodProtection: false
   },
   network: 'irc.irc',
-  nick: 't_t'
+  nick: 't_t',
+  ignore: ['TK']
 };
