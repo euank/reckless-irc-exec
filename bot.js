@@ -43,6 +43,10 @@ function sendOutput(to, from, stdout, stderr) {
 
 client.addListener('message', function(from, to, text) {
   var child,out,file;
+  if(config.ignore.indexOf(from) >= 0) {
+    return;
+  }
+
   if(/^\!(js)?eval /.test(text)) {
     text = text.substring(text.indexOf(' ')+1);
 
