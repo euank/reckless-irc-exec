@@ -1,3 +1,11 @@
+# Deprecated
+
+## This project is no longer used nor maintained
+
+You have been warned
+
+--------------
+
 # Reckless IRC Exec
 
 ## Intro
