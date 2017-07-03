@@ -24,9 +24,10 @@ function sendOutput(to, from, stdout, stderr) {
   }
   if(stdout.length === 0) {
     var stderrLine = 'stderr: ' + stderr.split("\n").join(" | ");
-    if(stderrLine.length < 460) return client.say(channel, stderrLine);
-    else {
-      client.say(channel, stderrLine.substring(456) + " ...");
+    if(stderrLine.length < 460) {
+      return client.say(channel, stderrLine);
+    } else {
+      client.say(channel, stderrLine.substring(0, 456) + " ...");
       return client.say(from, 'stderr: ' + stderr);
     }
   }
@@ -34,7 +35,7 @@ function sendOutput(to, from, stdout, stderr) {
   var oneLine = stdout.split("\n").join(" | ");
   if(oneLine.length < 460) client.say(channel, oneLine);
   else {
-    client.say(channel, oneLine.substring(456) + " ...");
+    client.say(channel, oneLine.substring(0, 456) + " ...");
     client.say(from, 'stdout: ' + stdout);
     if(stderr) client.say(from, 'stderr: ' + stderr);
     return;
